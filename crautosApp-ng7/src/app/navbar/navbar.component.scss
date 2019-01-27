@@ -1,0 +1,36 @@
+@import "../../scss/palette";
+
+#navbarHeader {
+  background: $darkPrimaryColor;
+}
+
+.navbar {
+  background: $primaryColor;
+}
+
+.navbar-nav {
+  display: inline;
+  li {
+    display: inline;
+    margin-right: 10px;
+    a {
+      &.nav-link {
+        color: $white;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar-nav {
+    display: block;
+    li {
+      width: 100%;
+      display: block;
+      margin-right: 0px;
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

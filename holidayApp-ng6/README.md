@@ -1,8 +1,12 @@
+## Demo
+
+[Demo here](http://iniapp.com/github/angular/holidayApp-ng6/)- version 0.0.1.
+
 # HolidayAppNg6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
-## Installing required npm
+<!-- ## Installing required npm
 
 Install `@angular/cli`:
 ```
@@ -41,10 +45,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # holidayApp-ng6
 
-## Demo
-
-[Demo here](https://steven-github.github.io/holidayApp-ng6/) - version 0.0.1.
-
 ## Important known issues
 
-[holidayAPI](http://holidayapi.com/) doesn't support multiple years, so web app is limited to display holidays for current year only.
+[holidayAPI](http://holidayapi.com/) doesn't support multiple years, so web app is limited to display holidays for current year only. -->
+
+## Notes:
+
+Angular 6 app to fetch dats from Holiday API and display selected amount of USA holidays.
+
+## What does this code cover:
+
+- Angular 6 Components
+- Angular 6 Templating
+- Angular 6 Routing
+- Angular 6 Event Binding
+- Angular 6 Class & Style Binding
+- Angular 6 Services

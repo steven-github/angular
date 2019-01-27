@@ -1,0 +1,96 @@
+@white: white;
+@grey: grey;
+
+@bgcolor_dark: #1b2432;
+
+.navbar-primary {
+  background-color: @bgcolor_dark;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 200px;
+  z-index: 8;
+  overflow: hidden;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  .navbar-primary-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 47px;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+        display: block;
+        padding: 10px 0px;
+        text-align: left;
+        border-bottom: solid 1px #444;
+        color: @white;
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+        &:hover {
+          text-decoration: none;
+          color: @grey;
+          .glyphicon {
+            color: @white;
+          }
+        }
+        .glyphicon {
+          margin-right: 6px;
+        }
+        .fas {
+          font-size: 20px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  &.collapsed {
+    width: 50px;
+    .navbar-primary-menu {
+      li {
+        a {
+          width: 22px;
+          text-align: center;
+        }
+      }
+    }
+    .glyphicon {
+      font-size: 18px;
+      padding: 2px;
+    }
+    .nav-label {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+.btn-expand-collapse {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 0;
+  padding: 1px 0;
+  color: @grey;
+  font-size: 20px;
+  text-align: center;
+  .glyphicon {
+    background: #8d9299;
+    color: @white;
+  }
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+.collapsed {
+  & + .main-content {
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,83 @@
+<header>
+  <div class="collapse" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 py-3 text-left">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="btn btn-link text-white mb-2" routerLink="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+              <a
+                class="btn btn-link text-white mb-2"
+                routerLink="/dashboard"
+                [hidden]="!name"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                class="btn btn-link text-white mb-2"
+                routerLink="/cars"
+                [hidden]="name"
+                >Cars</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 py-3 text-right">
+          <ul class="navbar-nav mr-auto">
+            <li>
+              <a
+                class="btn btn-link text-white mb-2"
+                routerLink="/signin"
+                [hidden]="name"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a
+                class="btn btn-warning mb-2"
+                routerLink="/"
+                [hidden]="!name"
+                (click)="logout()"
+                >Logout</a
+              >
+              <a
+                class="btn btn-warning mb-2"
+                routerLink="/signup"
+                [hidden]="name"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img
+          src="../../assets/images/logo-white.svg"
+          width="60"
+          height="60"
+          class="brand_logo"
+          alt="Logo"
+        />
+      </a>
+      <strong class="text-white" [hidden]="!name">Welcome {{ name }}</strong>
+      <button
+        class="btn btn-dark collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarHeader"
+        aria-controls="navbarHeader"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>

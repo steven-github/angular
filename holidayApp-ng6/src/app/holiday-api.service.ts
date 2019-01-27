@@ -8,7 +8,8 @@ export class HolidayApiService {
 
   constructor(private http: HttpClient) { }
 
-  private _apiURL = 'https://holidayapi.com/v1/holidays?key=12ed68aa-eebb-4c0b-a37b-6d3202de35ef';
+  // private _apiURL = 'https://holidayapi.com/v1/holidays?key=12ed68aa-eebb-4c0b-a37b-6d3202de35ef';
+  private _apiURL = 'https://holidayapi.pl/v1/holidays';
 
   getHolidays(info) {
     const month = info.date.getMonth() + 1;

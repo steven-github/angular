@@ -1,0 +1,78 @@
+<form
+  class="form-signin py-2 text-center"
+  [formGroup]="signinForm"
+  (ngSubmit)="onSubmit()"
+>
+  <img
+    class="mb-4"
+    src="../../assets/images/logo-yellow.svg"
+    alt=""
+    width="100"
+    height="100"
+  />
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <div class="form-group mb-3">
+    <div
+      [hidden]="!success"
+      class="text-center alert alert-success"
+      role="alert"
+    >
+      Signed In Successfully!
+    </div>
+    <div [hidden]="!error" class="text-center alert alert-danger" role="alert">
+      {{ error }}
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="email" class="sr-only">Email address</label>
+    <input
+      type="email"
+      id="email"
+      class="form-control"
+      placeholder="Email address"
+      required=""
+      autofocus=""
+      autocomplete="off"
+      formControlName="email"
+    />
+    <div *ngIf="submitted && signinForm.controls.email.errors" class="error">
+      <div
+        *ngIf="signinForm.controls.email.errors.required"
+        class="text-left text-danger"
+        role="alert"
+      >
+        Email is required!
+      </div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <label for="password" class="sr-only">Password</label>
+    <input
+      type="password"
+      id="password"
+      class="form-control"
+      placeholder="Password"
+      required=""
+      autocomplete="off"
+      formControlName="password"
+    />
+    <div *ngIf="submitted && signinForm.controls.password.errors" class="error">
+      <div
+        *ngIf="signinForm.controls.password.errors.required"
+        class="text-left text-danger"
+        role="alert"
+      >
+        Password is required!
+      </div>
+    </div>
+  </div>
+  <div class="form-group mb-3">
+    <p>
+      Don't have an account?
+      <a class="btn-link" routerLink="/signup">Sign Up</a>
+    </p>
+  </div>
+  <button class="btn btn-lg btn-warning btn-block mb-3" type="submit">
+    Sign In
+  </button>
+</form>

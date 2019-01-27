@@ -28,12 +28,12 @@ export class AppComponent {
     this.loaded = false;
     this.loading = true;
     this.api.getHolidays(this.info).subscribe(data => {
-        // console.log('Success', data);
+        console.log('Success', data);
         this.info.api = data;
         this.loaded = true;
         this.loading = false;
       }, error => {
-        // console.log('Error', error);
+        console.log('Error', error);
       });
   }
 

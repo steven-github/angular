@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://steven-github.github.io/ingenio-test/' && sudo ngh"
+    "deploy:gh": "ng build --prod --base-href='https://steven-github.github.io/angular/tree/gh-pages/ingenio-test/' && sudo ngh"
   },
   "private": true,
   "dependencies": {
